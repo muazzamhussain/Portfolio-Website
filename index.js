@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const mongoose = require("mongoose");
+const nodeMailer = require("nodemailer");
 require("dotenv").config();
 
 const app = express();
@@ -48,6 +49,14 @@ app.post("/submit-form", async (req, res) => {
   console.log("Subject:", subject);
   console.log("Message:", message);
   console.log("------------------------------");
+
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
 
   try {
     const newSubmission = new FormSubmission({ name, email, subject, message });
