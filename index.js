@@ -166,7 +166,7 @@ app.post("/submit-form", async (req, res) => {
     res
       .status(500)
       .send(
-        "An error occurred while saving your message or sending the email. Please try again later."
+        "An error occurred while saving your message or sending the email. Please send an Email"
       );
   }
 });
