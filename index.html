@@ -38,6 +38,72 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
 
+    <!-- Basic WebSite Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Muazzam Hussain Portfolio",
+        "alternateName": "Muazzam Hussain",
+        "url": "https://muazzam.up.railway.app/",
+        "description": "Portfolio of Muazzam Hussain - Aspiring Software Engineer specializing in full-stack development with Java, C++, SQL, and MERN Stack",
+        "author": {
+          "@type": "Person",
+          "name": "Muazzam Hussain"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://muazzam.up.railway.app/?search={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- Person Schema for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Muazzam Hussain",
+        "jobTitle": "Aspiring Software Engineer",
+        "description": "Full-stack developer with expertise in Java, C++, SQL, and MERN Stack",
+        "url": "https://muazzam.up.railway.app/",
+        "sameAs": [
+          "https://github.com/muazzamhussain",
+          "https://linkedin.com/in/muazzamhussain"
+        ],
+        "knowsAbout": [
+          "Java Programming",
+          "C++ Programming",
+          "SQL Database",
+          "MERN Stack",
+          "Full-Stack Development",
+          "Software Engineering"
+        ],
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "Your University/College Name"
+        }
+      }
+    </script>
+
+    <!-- Professional Service Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Muazzam Hussain - Software Development Services",
+        "description": "Professional software development services including web applications, database design, and full-stack solutions",
+        "provider": {
+          "@type": "Person",
+          "name": "Muazzam Hussain"
+        },
+        "areaServed": "Global",
+        "serviceType": "Software Development",
+        "url": "https://muazzam.up.railway.app/"
+      }
+    </script>
+
     <!-- =======================================================
   * Template Name: DevFolio
   * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
@@ -904,9 +970,7 @@
                 />
                 <div class="portfolio-info">
                   <h4>Real time Chat Application</h4>
-                  <p>
-                    A full-stack web application for Chatings.
-                  </p>
+                  <p>A full-stack web application for Chatings.</p>
                   <a
                     href="assets/img/portfolio/wanderlust (3).png"
                     title="Airbnb-like Rental Platform"
