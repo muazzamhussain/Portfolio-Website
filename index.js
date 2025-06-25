@@ -43,6 +43,15 @@ app.get("/", (req, res) => {
 app.post("/submit-form", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
+  // ===== Input Validation =====
+  if (!name || !email || !subject || !message) {
+    return res.status(400).send("All fields are required.");
+  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return res.status(400).send("Please provide a valid email address.");
+  }
+
   console.log("--- Form Submission Received ---");
   console.log("Name:", name);
   console.log("Email:", email);
@@ -64,7 +73,7 @@ app.post("/submit-form", async (req, res) => {
 
     // Send email notification to admin
     const adminMailOptions = {
-      from: process.env.EMAIL_USER,
+      from: `"Muazzam Hussain" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       subject: `New Form Submission: ${subject}`,
       text: `You have received a new message from ${name} (${email}):\n\n${message}`, // fallback plain text
@@ -92,7 +101,7 @@ app.post("/submit-form", async (req, res) => {
 
     // Send confirmation email to user
     const userMailOptions = {
-      from: process.env.EMAIL_USER,
+      from: `"Muazzam Hussain" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: `Thank you for your message: ${subject}`,
       text: `Hi ${name},\n\nThank you for reaching out! We have received your message and will get back to you soon.\n\nBest regards,\nMuazzam Hussain, Software Engineer`,
