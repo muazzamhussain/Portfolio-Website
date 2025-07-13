@@ -128,7 +128,7 @@ app.post("/submit-form", async (req, res) => {
     <hr style="border: none; border-top: 1px solid #eee; margin: 40px 0;" />
 
     <div style="display: flex; align-items: center;">
-      <img src="https://muazzam.up.railway.app/assets/img/pixelcut-export.png" alt="Muazzam Hussain" style="width: 65px; height: 65px; border-radius: 50%; margin-right: 15px; border: 2px solid #e0e0e0;" />
+      <img src="https://muazzam.up.railway.app/https://res.cloudinary.com/dfivgcj3i/image/upload/v1752403306/pixelcut-export_mnjxov.png" alt="Muazzam Hussain" style="width: 65px; height: 65px; border-radius: 50%; margin-right: 15px; border: 2px solid #e0e0e0;" />
       <div>
         <p style="margin: 0; font-size: 17px; font-weight: bold; color: #333;">Muazzam Hussain</p>
         <p style="margin: 3px 0; font-size: 14px; color: #666;">Aspiring Software Engineer</p>
